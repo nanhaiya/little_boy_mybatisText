@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--Dao层类的具体路径-->
+<mapper namespace="com.leanMybatis.dao.UserDaoImpl">
+
+    <!--
+    insert标签：只能存放插入语句
+          ID属性：给标签取唯一的标识符
+    -->
+    <insert id="insertUser">
+         insert into user set name='little_boy'
+     </insert>
+</mapper>
