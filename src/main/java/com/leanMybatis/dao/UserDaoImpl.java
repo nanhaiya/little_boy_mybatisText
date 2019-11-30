@@ -7,13 +7,19 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 
 public class UserDaoImpl {
-    public static void main(String[] args) throws IOException {
+    /**
+     * 插入name
+     * @throws IOException
+     */
+    @Test
+    public void insertUser() throws IOException {
         //SqlSession--->SqlSessionFactory--->SqlSessionFactoryBuilder
         SqlSessionFactoryBuilder ssfb=new SqlSessionFactoryBuilder();
         //将mybatis.xml文件变成字节流
@@ -26,5 +32,10 @@ public class UserDaoImpl {
         System.out.println("flag="+flag);
         //提交事务
         session.commit();
+    }
+
+    public static void main(String[] args) {
+
+
     }
 }
