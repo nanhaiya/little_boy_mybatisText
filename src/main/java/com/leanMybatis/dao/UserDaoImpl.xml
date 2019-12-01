@@ -9,8 +9,15 @@
     <!--
     insert标签：只能存放插入语句
           ID属性：给标签取唯一的标识符
+          parameterType:参数类型
     -->
     <insert id="insertUser">
          insert into user set name='little_boy'
      </insert>
+    <!--
+    带参数插入
+    -->
+    <insert id="insertBookByParam" parameterType="Map">
+         insert into user set name=#{name},token=#{token}
+    </insert>
 </mapper>
