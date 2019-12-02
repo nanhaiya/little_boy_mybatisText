@@ -20,4 +20,12 @@
     <insert id="insertBookByParam" parameterType="Map">
          insert into user set name=#{name},token=#{token}
     </insert>
+
+    <update id="updateDate">
+        update user set name=#{name} where id=#{id}
+    </update>
+
+    <delete id="deleteData">
+        delete from user where id=#{id}
+    </delete>
 </mapper>
